@@ -1,0 +1,22 @@
+## Python Backend
+
+This `server` folder is now a FastAPI backend.
+
+Run it locally with:
+
+```powershell
+pip install -r requirements.txt
+uvicorn main:app --reload --host 0.0.0.0 --port 5000
+```
+
+Frontend note:
+
+- Set `VITE_API_URI` to `http://localhost:5000`
+- The React client will then call the Python backend
+
+What remains here:
+
+- `app/` FastAPI application code
+- `main.py` backend entrypoint
+- `requirements.txt` Python dependencies
+- `rss-fetcher/` Rust RSS helper used by the Python backend
