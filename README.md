@@ -9,6 +9,10 @@ pip install -r requirements.txt
 uvicorn main:app --reload --host 0.0.0.0 --port 5000
 ```
 
+Deployment note:
+
+- `runtime.txt` pins Render to Python 3.11 so packages like `pydantic-core` install from prebuilt wheels instead of attempting a Rust source build on Python 3.14.
+
 Frontend note:
 
 - Set `VITE_API_URI` to `http://localhost:5000`
